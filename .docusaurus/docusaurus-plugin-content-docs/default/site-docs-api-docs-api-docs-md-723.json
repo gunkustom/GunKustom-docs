@@ -1,0 +1,20 @@
+{
+  "id": "api-docs/api-docs",
+  "title": "api-docs",
+  "description": "Auth API Documentation",
+  "source": "@site/docs/api-docs/api-docs.md",
+  "sourceDirName": "api-docs",
+  "slug": "/api-docs/",
+  "permalink": "/GunKustom-docs/docs/api-docs/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/gunkustom/GunKustom-docs/tree/main/docs/api-docs/api-docs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API-Documentation",
+    "permalink": "/GunKustom-docs/docs/category/api-documentation"
+  }
+}
