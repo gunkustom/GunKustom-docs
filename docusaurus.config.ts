@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: " Gunkustom Documentation",
+  title: "GunKustom Documentation",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -16,9 +16,8 @@ const config: Config = {
   baseUrl: "/GunKustom-docs/",
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "gunkustom", // Your GitHub organization name
+  projectName: "GunKustom-docs", // Your GitHub repository name
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -36,26 +35,16 @@ const config: Config = {
       "classic",
       {
         docs: {
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/gunkustom/GunKustom-docs/tree/main/",
         },
         blog: {
           showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
+          editUrl: "https://github.com/gunkustom/GunKustom-docs/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -70,7 +59,7 @@ const config: Config = {
     navbar: {
       title: "GunKustom",
       logo: {
-        alt: "My Site Logo",
+        alt: "GunKustom Logo",
         src: "img/gunkustom.svg",
       },
       items: [
@@ -82,7 +71,7 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/gunkustom/GunKustom-docs",
           label: "GitHub",
           position: "right",
         },
@@ -126,12 +115,12 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/gunkustom/GunKustom-docs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} GunKustom. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
