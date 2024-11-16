@@ -1,17 +1,19 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import React, { useEffect } from "react";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import { useColorMode } from "@docusaurus/theme-common";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  imgSrc: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Our Platform",
+    imgSrc: require("@site/static/img/Gunkustom-Logo-Full-White-1.png").default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -20,8 +22,8 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Your Build",
+    imgSrc: require("@site/static/img/Gunkustom-Logo-Full-White-1.png").default,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -30,8 +32,8 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Your Parts",
+    imgSrc: require("@site/static/img/Gunkustom-Logo-Full-White-1.png").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -41,11 +43,35 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, imgSrc, description }: FeatureItem) {
+  const { colorMode } = useColorMode();
+
+  useEffect(() => {
+    if (colorMode === "dark") {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [colorMode]);
+
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className={clsx("col col--4")}>
+      <div
+        className="text--center"
+        style={{
+          backgroundColor: colorMode === "light" ? "#505040" : "#FF6B00",
+          padding: "10px",
+          borderRadius: "8px",
+        }}
+      >
+        <img
+          src={imgSrc}
+          alt={title}
+          className={clsx(
+            styles.featureImg,
+            colorMode === "dark" && styles.darkImg
+          )}
+        />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
