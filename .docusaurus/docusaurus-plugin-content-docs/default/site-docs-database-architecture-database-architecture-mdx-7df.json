@@ -1,0 +1,23 @@
+{
+  "id": "database-architecture/database-architecture",
+  "title": "Database Architecture",
+  "description": "Database Architecture Diagram",
+  "source": "@site/docs/database-architecture/database-architecture.mdx",
+  "sourceDirName": "database-architecture",
+  "slug": "/database-architecture/",
+  "permalink": "/GunKustom-docs/docs/database-architecture/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/gunkustom/GunKustom-docs/tree/main/docs/database-architecture/database-architecture.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "database-architecture",
+    "title": "Database Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Database Architecture",
+    "permalink": "/GunKustom-docs/docs/category/database-architecture"
+  }
+}
